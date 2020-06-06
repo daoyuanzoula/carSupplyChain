@@ -27,10 +27,29 @@ public class CarGoodsServiceImpl implements CarVGoodsService {
     }
 
     @Override
-    public List<CarOrderDetails> queryOrdersDetails(Integer id) {
+    public List<CarOrderDetails> queryOrdersDetails(String id) {
         return dao.queryOrdersDetails(id);
     }
 
+    @Override
+    public void saveOrders(List<Cart> cartInCookie) {
+        dao.saveOrders(cartInCookie);
+    }
+
+    @Override
+    public TearDownDetails queryOrderTearsDetails(CarOrderDetails c) {
+        return dao.queryOrderTearsDetails(c);
+    }
+
+    @Override
+    public void saveTearDownDetails(TearDownDetails t) {
+        dao.saveTearDownDetails(t);
+    }
+
+    @Override
+    public List<TearDownDetails> queryAllOrderTearsDetails(String order_id) {
+        return dao.queryAllOrderTearsDetails(order_id);
+    }
 
 
 }

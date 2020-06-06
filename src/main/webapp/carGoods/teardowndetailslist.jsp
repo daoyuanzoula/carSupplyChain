@@ -19,19 +19,17 @@
         <div class="list-bd">
             <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
                 <tr>
-                    <th width="18%">编号</th>
-                    <th width="5%">价格</th>
-                    <th width="10%">操作</th>
-                    <%--<th width="10%">数量</th>--%>
+                    <th width="18%">订单号</th>
+                    <th width="5%">生产地</th>
+                    <th width="5%">商品名称</th>
+                    <th width="5%">数量</th>
                 </tr>
                 <c:forEach items="${list}" var="item">
                     <tr>
-                        <td>${item.number }</td>
-                        <td>${item.price }</td>
-                        <td>
-                            <a href="<%=basePath%>cargoods/queryordersdetails?id=${item.number}">订单详情</a>
-                            <a href="<%=basePath%>cargoods/teardowndetails?orderId=${item.number}">拆单</a>
-                        </td>
+                        <td>${item.orderId }</td>
+                        <td>${item.produce }</td>
+                        <td>${item.cargoods_name }</td>
+                        <td>${item.num }</td>
 
                     </tr>
                 </c:forEach>>
